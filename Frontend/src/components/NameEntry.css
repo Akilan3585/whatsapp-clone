@@ -1,0 +1,102 @@
+.name-entry-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.name-entry-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.name-entry-card h1 {
+  color: #25d366;
+  margin-bottom: 10px;
+  font-size: 32px;
+}
+
+.welcome-text {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.name-entry-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.name-entry-card input {
+  padding: 12px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.name-entry-card input:focus {
+  outline: none;
+  border-color: #25d366;
+}
+
+.name-entry-card button {
+  padding: 12px;
+  background: #25d366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.name-entry-card button:hover {
+  background: #20c853;
+}
+
+.name-entry-card button:active {
+  transform: scale(0.98);
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin: 10px 0 0 0;
+}
+
+.info-section {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.info-text {
+  color: #666;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #888;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.info-list li {
+  margin-bottom: 5px;
+}

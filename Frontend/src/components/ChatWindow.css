@@ -1,0 +1,250 @@
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+}
+
+.no-chat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #667781;
+  font-size: 18px;
+  background-color: #f0f2f5;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.chat-info {
+  flex: 1;
+}
+
+.chat-name {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.chat-status {
+  font-size: 13px;
+  color: #d9fdd3;
+  opacity: 0.9;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #e5ddd5;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23f0f0f0" opacity="0.05" width="100" height="100"/></svg>');
+}
+
+.message {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+  animation: slideIn 0.2s ease-out;
+  align-items: flex-start;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message.own {
+  align-items: flex-end;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.message.received {
+  align-items: flex-start;
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.message-sender {
+  font-size: 12px;
+  color: #075e54;
+  font-weight: 600;
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+.message-bubble {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.message-content {
+  background-color: white;
+  padding: 8px 12px 6px 12px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  position: relative;
+  line-height: 1.4;
+}
+
+.message.own .message-content {
+  background-color: #dcf8c6;
+  border-radius: 8px;
+}
+
+.message-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-top: -2px;
+  padding: 0 12px 6px 12px;
+  font-size: 11px;
+  color: #667781;
+}
+
+.message-time {
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.message-status {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+}
+
+.status-tick {
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.status-tick.single {
+  color: #8696a0;
+}
+
+.status-tick.double {
+  color: #8696a0;
+}
+
+.status-tick.read {
+  color: #53bdeb;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+  margin-left: 8px;
+}
+
+.typing-dots span {
+  width: 8px;
+  height: 8px;
+  background-color: #999;
+  border-radius: 50%;
+  display: inline-block;
+  animation: typing-animation 1.4s infinite;
+}
+
+.typing-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing-animation {
+  0%, 60%, 100% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+.message-form {
+  display: flex;
+  padding: 10px 15px;
+  background-color: #f0f2f5;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  background-color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.message-form input:focus {
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.2);
+}
+
+.message-form button {
+  padding: 12px 24px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.message-form button:hover {
+  background-color: #20c05c;
+  transform: scale(1.02);
+}
+
+.message-form button:active {
+  transform: scale(0.98);
+}

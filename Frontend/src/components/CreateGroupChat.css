@@ -1,0 +1,81 @@
+.create-group-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.create-group-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.create-group-modal h3 {
+  margin-top: 0;
+  color: #25d366;
+}
+
+.create-group-modal input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.user-list {
+  margin: 20px 0;
+}
+
+.user-list h4 {
+  margin-bottom: 10px;
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.user-item input {
+  margin-right: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-actions button:first-child {
+  background-color: #ccc;
+}
+
+.modal-actions button:last-child {
+  background-color: #25d366;
+  color: white;
+}
+
+.modal-actions button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
